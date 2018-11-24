@@ -32,6 +32,7 @@
 		.EnotherSearch:hover { color: blue; }
         .EnotherSearch:before { content: ""; position: absolute; top: 50%; left: 50%; width: calc(100% + 13px); height: calc(100% + 13px); z-index: -1; transform: translate(-50%, -50%); transition: 200ms linear; }
 		.EnotherSearch:hover:before { background: rgba(0, 0, 255, 0.1); }
+        /* Big Part */
         .displayGrid { display: grid; grid-template-columns: repeat(12, 1fr); /* grid-template-rows: repeat(10, 1fr); */ grid-auto-rows: minmax(20px, auto); /* grid-auto-flow: dense; */ padding: 0; width: 100%; margin: 0 auto; grid-column-gap: 40px; grid-row-gap: 20px; min-height: 860px; /* min-height: 800px; */  }
 		.GridCard { margin-bottom: 0; min-height: 80px; width: 100%; height: 100%; overflow: hidden; position: relative; transition: transform 200ms linear; display: block; }
 		.GridCard:nth-child(1) { grid-column: 8 / 13; grid-row: 1 / 9; margin-bottom: 0; }
@@ -52,14 +53,48 @@
         .CardTitleBoxFourth { bottom: -1rem; }
         .CardTitleBoxFifth { bottom: -1rem; } 
         /* .CardTitleBox:hover { transform: translateY(-15px); } */
+        /*
         .GridCard:hover > .CardImageBox { transform: translateY(-10px); }
         .GridCard:hover > .CardTitleBox { transform: translateY(-15px); }
+        */
         .CTXText { font-size: 1.5rem; line-height: 10px; font-weight: bold; color: #333333; margin: 0; transition: 200ms linear; }
 		.CTXTextFirst { font-size: 2rem; }  
         .CTXAddText { position: absolute; top: 0; left: 20px; background-color: black; /* clip-path: inset(50%); */ transform: translateY(-50%); /* width: 1px; height: 1px; */ padding: 0; margin: 0; overflow: hidden; white-space: nowrap; font-size: 0.6rem; text-transform: uppercase; font-weight: bold;letter-spacing: 1.2px;color: white; padding: 2px 5px; }
         .CridLink .CardImageBox, .CridLink .CardTitleBox { border: none; box-sizing: border-box; transition: 200ms; transform: translateY(0px); }
         .CridLink:hover .CardImageBox { transform: translateY(-15px); transition-delay: 0s; }
 	    .CridLink:hover .CardTitleBox { transform: translateY(-25px); transition-delay: 0s; }
+        /* Small part */
+        .SecondPartGrid { display: flex; flex-wrap: wrap; margin: 0 -15px 3rem -15px; }
+        .SPGFirstBlock { margin-bottom: 1.5rem; max-width: 720px; }
+        .SPGSecondBlock { margin: 0 auto; overflow: hidden; max-width: 720px; }
+        .NewSearchBlock { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+        .FirstBlockNewSearchPart { position: relative; flex: 0 0 100%; min-height: 1px; max-width: 100%; margin-bottom: 3rem; padding: 0 15px; font-size: 3rem; }
+        
+        .SecondBlockNewSearchPart { display: flex; position: relative; align-items: center; margin-bottom: 1rem; flex: 0 0 100%; max-width: 100%; width: 100%; min-height: 1px; padding: 0 15px; }
+        .SelectBlockSmall { max-width: 200px; width: auto; position: relative; margin-right: 1rem; display: block; font-size: 1rem; }
+        .SelectBlockSmall:after { content: ""; display: block; position: absolute; width: 8px; height: 8px; right: 22px; top: 50%; border-left: 1px solid gray; border-bottom: 1px solid gray; z-index: 1; transform: translateY(-50%) rotare(-45deg);  }
+        .SelectTopicSmall { border: 1px solid #b2b4b9; font-size: 1.2rem; padding: 16px 50px 16px 12px; width: 100%; background-color: white; color: #333333; position: relative; text-decoration: none; margin: 0; }  
+		.SelectTopicSmall:after { content: ""; display: block; position: absolute; width: 8px; height: 8px; right: 22px; top: 50%; border-left: 1px solid gray; border-right: 1px solid gray; z-index: 1; transform: translateY(-50%) rotate(-45deg); }
+		.SelectTopicSmall option:nth-child(1) { color: #333333; }
+        .commitButtonSmall { height: 54px; font-size: 1.4rem; padding: 10px 26px; background-color: transparent; border: 1px solid blue; color: blue; cursor: pointer; display: inline-block; line-height: 1; margin: 0; overflow: hidden; position: relative; text-align: ccenter;text-decoration: none; z-index: 1;  }
+        .ThirdBlockNewSearchPart { display: flex; align-items: center; flex: 0 0 100%; max-width: 100%; position: relative; width: 100%; min-height: 1px; padding: 0 15px; }
+        .WrapperUlBlock { margin-bottom: 6rem; touch-action: pan-y; }
+        .DiscoveryBlock { transition-duration: 0s; transform: translate3d(0, 0, 0); padding: 0; touch-action: pan-y; position: relative; width: 100%; height: 100%; z-index: 1; display: flex; box-sizing: content-box; margin: 0; font-size: 1.2rem; line-height: 1.5; color: #333333; }
+        .DiscoveryBlock .SmallCard { margin-right: 18px; }
+        .SmallCard { width: 240px; margin-bottom: 0; background-color: transparent; border: 0; display: block; min-height: 80px; overflow: hidden; position: relative; height: 100%; flex-shrink: 0; flex-direction: row; word-wrap: break-word; min-width: 0; }
+        .CardLink { position: relative; display: block; height: 100%; width: 100%; left: 0; top: 0; color: blue; text-decoration: none; white-space: nowrap; z-index: 1; background-color: transparent; transition: transform 0.1s linear; }
+        .CardImageBoxSmall { padding-bottom: 60%; background-color: gray; background-position: center; background-size: cover; display: block; margin-bottom: -40px; position: relative; width: 100%;  }
+        .CardTitleBoxSmall { padding: 10px; margin: 0 0 0 10px; width: calc(100% - 9px); border: 0; background-color: white; display: block; position: relative; }
+        .CardLink .CardImaCardImageBoxSmalleBox, .CardLink .CardTitleBoxSmall { border: none; box-sizing: border-box; transition: 200ms; transform: translateY(0px); }
+        .CardLink:hover .CardImageBoxSmall { transform: translateY(-10px); transition-delay: 0s; }
+	    .CardLink:hover .CardTitleBoxSmall { transform: translateY(-15px); transition-delay: 0s; }
+        .CTXTextSmall { color: #333333; opacity: 1; white-space: normal; font-weight: 600; margin: 0; font-size: 1.8rem; line-height: 1.2; }
+        
+        
+        
+        
+        
+        
         /*
         .CTXAddTextFirst {  }
 		.CTXAddTextSecond {  }
@@ -94,6 +129,11 @@
             /* .CardTitleBoxThird {  } */
             .CTXTextFourth { font-size: 1.2rem; }
             .CTXTextFifth { font-size: 1.2rem; } 
+        }
+
+        @media screen and (max-width: 700px) {
+            FirstPartGrid { display: none; }
+            SecondPartGrid { display: flex; }
         }
 
     </style>
@@ -248,8 +288,154 @@
                         </div>
                     </div>
                     <div class="SecondPartGrid">
-                        
+                        <div class="conteiner SPGFirstBlock">
+                            <div class="NewSearchBlock">
+                                <h2 class="FirstBlockNewSearchPart">
+                                    Discover more at the Field
+                                </h2>
+                                <div class="SecondBlockNewSearchPart">
+                                    <div class="SelectBlockSmall">
+                                        <select class="SelectTopicSmall">
+                                            <option disable value="none" selected> 
+                                                Browse Topics
+                                            </option>
+                                            <option> 
+                                                Animals
+                                            </option>
+                                            <option> 
+                                                Behind-the-Scenes
+                                            </option>
+                                            <option>
+                                                Cultures
+                                            </option>
+                                            <option> 
+                                                Dinosaurs
+                                            </option>
+                                            <option> 
+                                                Environment & Conservation
+                                            </option>
+                                            <option> 
+                                                Fossils
+                                            </option>
+                                            <option> 
+                                                Gems & Minerals
+                                            </option>
+                                            <option> 
+                                                Meteorites
+                                            </option>
+                                            <option> 
+                                                Mummies
+                                            </option>
+                                            <option> 
+                                                Plants & Fungi
+                                            </option>
+                                            <option> 
+                                                Science News
+                                            </option>
+                                        </select>
+                                    </div>
+                                    <button class="commitButton">
+                                        Filter
+                                    </button>
+                                </div>
+                                <div class="ThirdBlockNewSearchPart">
+                                    <span arai-hidden="true" > <!-- style=" margin: 0 1rem; "  -->
+                                        or
+                                    </span>
+                                    <button class="EnotherSearch">
+                                        Shuffle
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row SPGSecondBlock">
+                            <div class="conteiner">  
+                               <div class="WrapperUlBlock">
+                                   <ul class="DiscoveryBlock">
+                                       <!-- <li class="SmallCard">
+   
+                                       </li> -->
+                                       <li class="SmallCard">
+                                           <a class="CardLink " href="https://www.fieldmuseum.org/at-the-field/exhibitions/full-circleomani-wakan-lakota-artist-rhonda-holy-bear">
+                                               <div class="CardImageBoxSmall">
+                                                   <image class="CardLinkImage" src="media/p1-17-069-2655.jpg">
+                                               </div>
+                                               <div class="CardTitleBoxSmall CardTitleBoxFirst">
+                                                   <span class="CTXTextSmall CTXTextFirst" >
+                                                       Grainger Science Hub
+                                                   </span>
+                                                   <span class="CTXAddText CTXAddTextFirst">
+                                                       Exhibition
+                                                   </span>
+                                               </div>
+                                           </a>
+                                       </li>
+                                       <li class="SmallCard">
+                                           <a class="CardLink" href="https://www.fieldmuseum.org/blog/start-small-composting">
+                                               <div class="CardImageBoxSmall">
+                                                   <image class="CardLinkImage" src="media/p1-compost_header.jpg">
+                                               </div>
+                                               <div class="CardTitleBoxSmall CardTitleBoxSecond">
+                                                   <span class="CTXTextSmall CTXTextSecond" >
+                                                       Start Small with Composting
+                                                   </span>
+                                                   <span class="CTXAddText CTXAddTextSecond">
+                                                       blog
+                                                   </span>
+                                               </div>
+                                           </a>
+                                       </li>
+                                       <li class="SmallCard">
+                                           <a class="CardLink" href="https://www.fieldmuseum.org/our-events/dozin-dinos" >
+                                               <div class="CardImageBoxSmall">
+                                                   <image class="CardLinkImage" src="media/p1-field451_edited.jpg" >
+                                               </div>
+                                               <div class="CardTitleBoxSmall CardTitleBoxThird" >
+                                                   <span class="CTXTextSmall CTXTextThird" >
+                                                       Dozin' with the Dinos
+                                                   </span>
+                                                   <span class="CTXAddText CTXAddTextThird">
+                                                       Event
+                                                   </span>
+                                               </div>
+                                           </a>
+                                       </li>
+                                       <li class="SmallCard">
+                                           <a class="CardLink" href="https://www.fieldmuseum.org/blog/unearthing-evidence-turkey-domestication-1498-years-ago" >
+                                               <div class="CardImageBoxSmall">
+                                                   <image class="CardLinkImage" src="media/p1-turkey_header.png" >
+                                               </div>
+                                               <div class="CardTitleBoxSmall CardTitleBoxFourth" >
+                                                   <span class="CTXTextSmall CTXTextFourth" >
+                                                       Unearthing Evidence of Turkey Domestication 1,500 Years Ago
+                                                   </span>
+                                                   <span class="CTXAddText CTXAddTextFourth">
+                                                       blog
+                                                   </span>
+                                               </div>
+                                           </a>
+                                       </li>
+                                       <li class="SmallCard">
+                                           <a class="CardLink" href="https://www.fieldmuseum.org/blog/collecting-vietnam-search-millipedes" >
+                                               <div class="CardImageBoxSmall">
+                                                   <image class="CardLinkImage" src="media/p1-hqdefault.jpg" >
+                                               </div>
+                                               <div class="CardTitleBoxSmall CardTitleBoxFifth" >
+                                                   <span class="CTXTextSmall CTXTextFifth" >
+                                                       Collecting in Vietnam: The Search for Millipedes 
+                                                   </span>
+                                                   <span class="CTXAddText CTXAddTextFifth">
+                                                       video
+                                                   </span>
+                                               </div>
+                                           </a>
+                                       </li>
+                                   </ul>
+                               </div>
+                           </div>
+                       </div>
                     </div>
+                    
                     
                     
                 </div>
